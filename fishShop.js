@@ -19,11 +19,6 @@ process.stdin.setEncoding("utf8");
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-/*if (process.argv.length != 3) {
-    process.stdout.write(`Usage fishShop.js jsonFile`);
-    process.exit(1);
-}*/
-
 const portNumber = 3000;
 app.listen(portNumber);
 console.log(`To access server: http://localhost:${portNumber}`);
