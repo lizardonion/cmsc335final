@@ -31,9 +31,9 @@ console.log(`To access server: http://localhost:${portNumber}`);
 const prompt = "Stop to shutdown the server: ";
 process.stdout.write(prompt);
 process.stdin.on("readable", function () {
-    const dataInput = process.stdin.read().toLowerCase();
+    const dataInput = process.stdin.read();
     if (dataInput !== null) {
-      const command = dataInput.trim();
+    const command = dataInput.toLowerCase().trim();
       if (command === "stop") {
         console.log("Shutting down the server");
         process.exit(0);
