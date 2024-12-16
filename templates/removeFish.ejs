@@ -1,0 +1,48 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Admin GFA</title>
+</head>
+<script>
+    function confirmSubmission(event) {
+        if (!confirm("please reconsider removing all fish order")) {
+            event.preventDefault(); 
+        }
+    }
+
+
+</script>
+
+<style>
+    html{
+		background-image: url(https://www.pngmart.com/files/3/Bubbles-PNG-Transparent-Picture.png);
+		background-color:  rgb(0, 213, 255);
+		background-size: cover;
+	}
+
+    #fish_link{
+        padding-bottom: 1rem;
+    }
+    #spongebob_fish{
+        max-width: 20%;
+        margin-left: 40%;
+        margin-top: 10%;
+    }
+
+
+</style>
+
+<body class="remove_fish">
+	<h1>remove all fish orders</h1>
+	<form action="/removeFish" method="post" onsubmit = "confirmSubmission(event)">
+		<input type="submit" value="remove all fish orders"/>
+	</form>
+    <hr>
+    <a id = "fish_link" href = "/">fish shop home</a><br>
+    <img src="https://i1.wp.com/comicsandmemes.com/wp-content/uploads/blank-meme-template-spongebob-disappointed-green-fish-1.jpg?resize=1536%2C1453&ssl=1" alt="spongebob_fish" id="spongebob_fish">
+</body>
+
+</html>
